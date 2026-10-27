@@ -16,6 +16,9 @@ Das Terminal gibt uns zugriff auf unseren Computer ohne graphisches Interface, s
 ### Öffnen
 MacOS: cmd + t
 
+### Abbrechen
+Manchmal laufen irgendwelche prozesse sehr lange und ihr wollt sie einfach nur beenden. Dann strg + c drücken!
+
 ### Nutzung
 Das Terminal kann viele Befehle ausführen. Diese werden immer als erstes geschrieben.
 z.B. `cd ~`
@@ -110,11 +113,30 @@ hier noch ein paar essentielle:
 
 `nano example.txt` öffnet einen terminal basierten text editor.
 
-## Git installieren
-### MacOS
+## Git
+### installieren
 [Link zu git download](https://git-scm.com/install/mac)
 Für macOS müssen wir git über den homebrew package manager installieren. Dafür erst homebrew installieren und dann folgendes im terminal eingeben:
 ```bash
 brew install git
 ```
+
+### Initialisierung
+
+#### clone
+
+#### init
+
+### staging
+
+### commit
+
+### branch
+
+### merge
+
+### remote anbindung
+
+### guis?
+
 
