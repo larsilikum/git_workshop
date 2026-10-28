@@ -156,7 +156,9 @@ Folglich benutzen wir `git add .` um unser ganzes working directory zu stagen. A
 Nun sind alle geänderten Dateien gestaged und wir können unseren Zwischenstand speichern, dazu brauchen wir noch den `commit` Befehl.
 
 ### commit
-Der `commit` Befehl speichert also alle Änderungen aus gestageten Dateien ab. Ein Commit hat dabei auch immer eine Commit-message. Dazu gibt es verschiedene Philosophien, aber meistens beschreibt sie was geändert wurde, damit wir im nachhinein besser nachvollziehen können was wann passiert ist, wenn wir einen bestimmten Zwischenstand suchen.
+Der `commit` Befehl speichert also alle Änderungen aus gestageten Dateien ab. Ein Commit hat dabei auch immer eine Commit-message. Dazu gibt es verschiedene Philosophien, aber meistens beschreibt sie was geändert wurde, damit wir im nachhinein besser nachvollziehen können was wann passiert ist, wenn wir einen bestimmten Zwischenstand suchen. 
+
+**Ein Commit sollte keine schwerwiegenden Fehler haben. Also das Projekt sollte funktionieren wenn wir diesen Abspeichern.**
 
 Der Befehl ist folgendermaßen aufgebaut:
 `git commit -m "Das hier ist die commit message"`
@@ -176,12 +178,30 @@ Eure letzten commits seht ihr auch z.B. mit `git log`.
 
 ### checkout
 Der `checkout` befehl lässt uns zurückgehen zu alten commits oder auf andere branches wechseln.
+*bevor wir auf einen anderen commit/branch wechseln sollten wir unsere Änderungen committen, stashen oder resetten*
 
-Z.B.
+Z.B. 
+```bash
+git checkout 7a6d51fc2838699a8f8c93c10c0b411870f2dd17
+```
 
+nach dem checkout Befehl schreiben wir den hash des commits (oder den namen des branches) zu dem wir zurückkehren wollen. Den findet ihr z.B. mit `git log`.
+Da wir uns jetzt in einer alten version befinden können wir Änderungen von hier ausgehend nicht direkt abspeichern. Die automatisch angezeigte Hilfe nach diesem command gibt uns den Hinweis einen neuen Branch zu erstellen!
 
 ### branch
+Ein Branch steht bei git analog zu einem paralleluniversum oder so. An einem gewissen Punkt (Commit) spaltet sich ein branch von einem anderen ab. Anders als bei echten Ästen und Bäumen können zwei Branches sich aber auch wieder *mergen*/kombinieren.
 
+Wann genau wir branches anlegen ist auch uns überlassen. Oft starten wir einen neuen branch um Sachen auszuprobieren, die am Ende vielleicht gar nicht im Projekt auftauchen.
+
+Oder wir Arbeiten mit issues und legen für jedes issue einen neuen Branch an. Z.B. wollen wir eine neue Unterseite in unsere Webseite einbauen. Da wir dafür wohl mehr als einen commit brauchen, legen wir einen neuen branch an. Bis die unterseite fertig ist arbeiten wir auf diesem branch und mergen ihn anschließend auf den main branch.
+
+Oft haben git repos zumindest zwei branches. Einen *development* und einen *production* branch. Der *production* branch hat den stand der aktuell deployed ist, also auf dem server liegt. Der *development* branch hat den aktuellen stand der Entwicklung. Also neue Features, die aber noch nicht auf der Live Seite sind. Für ein Update wird dann der *development* branch in den *production* branch gemerget.
+
+Es gibt mehrere Arten einen branch anzulegen.
+
+`git checkout -b <branch-name>` mit checkout können wir mit der -b flag angeben das wir einen neuen branch anlegen wollen. Dabei startet dieser vom aktuell ausgecheckten commit (HEAD) und wir nehmen alle Änderungen die noch nicht commited wurden mit auf den neuen branch!
+
+`git branch <branch-name>` hier erstellen wir vom aktuellen commit (HEAD) aus einen neuen branch. Wir wechseln aber im gegensatz zur checkout variante nicht dorthin. Dafür können wir `checkout` oder `switch`(ähnlich wie checkout, aber nur für branches) benutzen.
 
 ### merge
 
