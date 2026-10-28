@@ -161,9 +161,27 @@ Der `commit` Befehl speichert also alle Änderungen aus gestageten Dateien ab. E
 Der Befehl ist folgendermaßen aufgebaut:
 `git commit -m "Das hier ist die commit message"`
 
-Die `-m` flag gibt an, das danach die commit message folgt. Wenn ihr das nicht tut und nur `git commit` ausführt, werdet ihr gezwungen eine message einzugeben.
+Die `-m` flag gibt an, das danach die commit message folgt. Wenn ihr das nicht tut und nur `git commit` ausführt, werdet ihr gezwungen eine message einzugeben. Dabei wird nano geöffnet und ihr müsst dort die commit message eingeben, mit strg+o und dann enter abspeichern und dann mit strg+x verlassen, also einfach lieber direkt die message mit der flag angeben :)
+
+Jetzt ist euer commit angelegt und ihr solltet eine Zeile im Terminal bekommen die irgendwie so ähnlich aussieht:
+
+```bash
+[main 14dbd9c] add staging and commit instructions
+ 1 file changed, 27 insertions(+), 1 deletion(-)
+```
+
+Hier sehen wir jetzt auf welchem branch der commit gespeichert wurde (in eckigen klammern) eure commit message dahinter und in der nächsten Zeile, wieviele Dateien und Zeilen sich geändert haben.
+
+Eure letzten commits seht ihr auch z.B. mit `git log`.
+
+### checkout
+Der `checkout` befehl lässt uns zurückgehen zu alten commits oder auf andere branches wechseln.
+
+Z.B.
+
 
 ### branch
+
 
 ### merge
 
