@@ -213,8 +213,12 @@ Es gibt mehrere Arten einen branch anzulegen.
 Wie auch bei allen anderen commands können wir natürlich auch immer die hilfe mit `git branch --help` öffnen.
 
 ### merge
+`git merge <branch-name>` merged den angegebenen branch in den aktuellen. Achtung hier vor merge konflikten! Das ist ein großes Thema. Oft lohnt es sich bei komplexeren Projekten, über ein pull request/merge request das Interface von eurem git provider zum mergen zu benutzen.
 
 ### .gitignore?
+Die .gitignore Datei wird dafür verwendet dateien oder Ordner vom Tracking durch git auszuschließen.
+
+Hier schreibt ihr pro Zeile einen Pfad. Das asterisk Symbol steht für alles. Folglich bedeutet `assets/*` dass wir keine Dateien im assets Ordner tracken. Dieses kann aber auch folgendermaßen verwendet werden: `*.log`: hier geben wir an, dass wir keine Dateien mit einer .log Endung tracken möchten.
 
 ### remote anbindung
 
