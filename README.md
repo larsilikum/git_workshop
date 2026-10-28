@@ -128,14 +128,40 @@ Es gibt zwei Wege ein git repository zu starten. Entweder wir kopieren ein exist
 
 #### clone
 Um ein bestehendes Projekt einfach auf unseren Computer zu laden gibt es den `clone` Befehl.
-Dieser wird folgendermaßen ausgeführt:
+
+Hier wird das Projekt in das derzeitige working directory geladen! Also am besten nicht in eurem home directory ausführen :)
+
+Der Befehl wird folgendermaßen ausgeführt:
 `git clone <url-des-repositories>`
 
+Die url findet ihr bei den jeweiligen git providern (hier github)
+https://github.com/larsilikum/git_workshop
+
+Diese Repository lässt sich also mit:
+`git clone https://github.com/larsilikum/git_workshop.git` klonen.
+
+Bei öffentlichen Repositories solltet ihr euch nicht anmelden müssen um sie zu klonen.
+
 #### init
+Habt ihr bereits ein Projekt, oder wollt komplett von vorne starten, gibt es den `init` Befehl.
+Im Terminal navigiert ihr zu eurem Projektordner und gebt dort den Befehl `git init` ein. Damit ist git initiiert und ihr könnt weiter machen.
 
 ### staging
+Wenn wir nun an unserem Projekt gearbeitet haben und einen Zwischenstand speichern möchten, müssen wir auswählen aus welchen Dateien wir die Änderungen abspeichern wollen. Das nennt sich *staging*. Meistens wollen wir einfach alle Änderungen übernehmen, aber es kann auch mal Ausnahmen geben.
+
+Der Befehl um Dateien zu *stagen* ist `git add <pfad>`. 
+
+Folglich benutzen wir `git add .` um unser ganzes working directory zu stagen. Achtung falls ihr zwischendurch in einen Unterordner navigiert seid wird nur dieser gestaged, da `.` ein relativer Pfad ist.
+
+Nun sind alle geänderten Dateien gestaged und wir können unseren Zwischenstand speichern, dazu brauchen wir noch den `commit` Befehl.
 
 ### commit
+Der `commit` Befehl speichert also alle Änderungen aus gestageten Dateien ab. Ein Commit hat dabei auch immer eine Commit-message. Dazu gibt es verschiedene Philosophien, aber meistens beschreibt sie was geändert wurde, damit wir im nachhinein besser nachvollziehen können was wann passiert ist, wenn wir einen bestimmten Zwischenstand suchen.
+
+Der Befehl ist folgendermaßen aufgebaut:
+`git commit -m "Das hier ist die commit message"`
+
+Die `-m` flag gibt an, das danach die commit message folgt. Wenn ihr das nicht tut und nur `git commit` ausführt, werdet ihr gezwungen eine message einzugeben.
 
 ### branch
 
