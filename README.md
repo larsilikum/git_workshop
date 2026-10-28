@@ -203,6 +203,15 @@ Es gibt mehrere Arten einen branch anzulegen.
 
 `git branch <branch-name>` hier erstellen wir vom aktuellen commit (HEAD) aus einen neuen branch. Wir wechseln aber im gegensatz zur checkout variante nicht dorthin. Dafür können wir `checkout` oder `switch`(ähnlich wie checkout, aber nur für branches) benutzen.
 
+#### Andere wichtige branch befehle
+`git branch -l` / `git branch --list` listet alle branches auf.
+
+`git branch --show-current` zeigt den aktuellen branch.
+
+`git branch -m <new-branch-name>` benennt den aktuellen branch um.
+
+Wie auch bei allen anderen commands können wir natürlich auch immer die hilfe mit `git branch --help` öffnen.
+
 ### merge
 
 ### .gitignore?
