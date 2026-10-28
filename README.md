@@ -122,8 +122,14 @@ brew install git
 ```
 
 ### Initialisierung
+Es gibt zwei Wege ein git repository zu starten. Entweder wir kopieren ein existierendes Projekt oder initieren git in unserem (neuen oder bestehenden) Projekt.
+
+*repository* steht für den gesamten Code + Dateien und Ordner die zu einem Coding Projekt gehören.
 
 #### clone
+Um ein bestehendes Projekt einfach auf unseren Computer zu laden gibt es den `clone` Befehl.
+Dieser wird folgendermaßen ausgeführt:
+`git clone <url-des-repositories>`
 
 #### init
 
@@ -134,6 +140,8 @@ brew install git
 ### branch
 
 ### merge
+
+### .gitignore?
 
 ### remote anbindung
 
