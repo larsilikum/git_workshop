@@ -221,6 +221,7 @@ Die .gitignore Datei wird dafür verwendet dateien oder Ordner vom Tracking durc
 Hier schreibt ihr pro Zeile einen Pfad. Das asterisk Symbol steht für alles. Folglich bedeutet `assets/*` dass wir keine Dateien im assets Ordner tracken. Dieses kann aber auch folgendermaßen verwendet werden: `*.log`: hier geben wir an, dass wir keine Dateien mit einer .log Endung tracken möchten.
 
 ### remote anbindung
+test eintrag
 
 ### guis?
 
